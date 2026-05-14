@@ -15,7 +15,7 @@ export default function Hero({ isMobile }: { isMobile: boolean }) {
         // MOBILE LAYOUT
         <div className="w-full flex flex-col items-start">
           <div className="font-mono text-[11px] text-brand-primary tracking-[3px] mb-4 uppercase">
-            ✦ TIRTH PATEL — RAJKOT, INDIA
+            ✦ TIRTH PATEL — MORBI, INDIA
           </div>
           
           <h1 className="font-display font-medium text-[clamp(42px,11vw,72px)] leading-[1] mb-5 tracking-tight">
@@ -66,7 +66,7 @@ export default function Hero({ isMobile }: { isMobile: boolean }) {
         <div className="w-full flex flex-row items-center justify-between gap-12 h-full z-10 relative">
           <div className="w-1/2 flex flex-col items-start pr-4">
             <div className="font-mono text-[13px] text-brand-primary tracking-[2px] mb-6 uppercase">
-              ✦ TIRTH PATEL — RAJKOT, INDIA
+              ✦ TIRTH PATEL — MORBI, INDIA
             </div>
             
             <h1 className="font-display font-medium text-[clamp(48px,5.5vw,96px)] leading-[1] mb-6 tracking-tight overflow-visible">
