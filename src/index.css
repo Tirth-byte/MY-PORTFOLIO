@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #C77DFF;
+  --color-brand-secondary: #E0AAFF;
+  --color-brand-tertiary: #9D4EDD;
+  --color-brand-dim: #7A699B;
+  --color-brand-bg: #030008;
+  --color-brand-bg-alpha: rgba(3, 0, 8, 0.97);
+  --color-brand-border: rgba(199, 125, 255, 0.15);
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --primary: #C77DFF;
+    --secondary: #E0AAFF;
+    --tertiary: #9D4EDD;
+    --dim: #7A699B;
+    --bg: #030008;
+    --border: rgba(199, 125, 255, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    background-color: var(--bg);
+    color: white;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Cormorant Garamond", serif;
+  }
+}
+
+@utility text-shadow-* {
+  text-shadow: --value(--text-shadow-*, *);
+}
+
+@keyframes floatTag {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(10px, -15px) scale(1.05); }
+  66% { transform: translate(-10px, 10px) scale(0.95); }
+}
+
+@media (max-width: 767px) {
+  @keyframes floatTag {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50%       { transform: translateY(-5px) rotate(0.5deg); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(199, 125, 255, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-primary);
+}
